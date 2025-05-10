@@ -1,0 +1,77 @@
+.create-campaign-container {
+    max-width: 500px; /* Slightly wider form */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.create-campaign-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resize */
+    min-height: 80px;
+}
+
+.error-message, .success-message {
+    margin-top: 15px; /* Add margin top */
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+
+.success-message {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+
+.create-campaign-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px; /* Add margin top */
+}
+
+.create-campaign-container button:hover {
+    background-color: #0056b3;
+}
+
+.create-campaign-container button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+} 
