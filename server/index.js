@@ -421,6 +421,21 @@ async function startServer() {
             }
         });
 
+        // Endpoint to fetch donations for a specific campaign
+        app.get('/api/campaigns/:id/donations', async (req, res) => {
+            const { id } = req.params;
+            try {
+                const [donations] = await db.query(
+                    'SELECT id, amount, donor_name, message, created_at FROM donations WHERE campaign_id = ? ORDER BY created_at DESC',
+                    [id]
+                );
+                res.json(donations);
+            } catch (err) {
+                console.error('Error fetching campaign donations:', err);
+                res.status(500).json({ error: 'Error fetching campaign donations' });
+            }
+        });
+
         
         app.use((err, req, res, next) => {
             console.error('Global error handler:', err);
